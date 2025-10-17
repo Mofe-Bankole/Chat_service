@@ -22,7 +22,7 @@ router.post("chat/message" , async(req: Request<AuthRequest>, res: Response) => 
 
         return res.json({
             status: 200,
-            message: "Message sent successfully!",
+            message: "Message Sent successfully! Awaiting response",
             data: newMessage,
         });
     } catch (error: any) {

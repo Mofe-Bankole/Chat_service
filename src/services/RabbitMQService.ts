@@ -20,7 +20,7 @@ class RabbitMQService {
 
         this.channel.consume(
             this.responseQueue,
-            (msg) => {
+            async (msg) => {
                 if (msg && msg.content) {
                     const correlationId = msg.properties.correlationId;
                     const user = JSON.parse(msg.content.toString());
